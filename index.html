@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br"> <!--Define a linguagem do site-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="visual.css">
+    <link rel="stylesheet" href="visual.css"> <!--Importa o css pro html-->
 
-    <title>ashencore</title>
+    <title>ashencore</title> <!--Titúlo que fica lá em cima do site-->
 </head>
 <body>
-    <div class="copland"></div>
-    <div class="login">
-        <h1 class="title"><i>ASHENCORE-OS</i></h1>
-        <div class="userdiv">
-            <input type="text" placeholder="" id="user">
+    <div class="copland"></div> <!--Div pra poder trabalhar só em cima da logo sem mexer no resto-->
+        <div class="login"> <!--Uma div só para a parte do login: usuario, senha, logar, etc-->
+            <h1 class="title"><i>ASHENCORE-OS</i></h1> <!--Cabeçalho principal que aparece na homepage-->
+                <div class="userdiv"> <!--Outra div, feita pra separar e trabalhar melhor no CSS-->
+                    <input type="text" placeholder="" id="user"> <!--Input, onde o usuário insere o email(nesse caso é texto generico)-->
+                </div>
+                <div class="passdiv">
+                    <input type="password" placeholder="" id="pass">
+                </div>
+                <div class="loginbutton">
+                    <button id="botao"><i><b>X</b></i></button>
+                </div>
         </div>
-        <div class="passdiv">
-            <input type="password" placeholder="" id="pass">
-        </div>
-        <div class="loginbutton">
-            <button id="botao"><i><b>X</b></i></button>
-        </div>
-    </div>
     <script src="index.js"></script>
 </body>
 </html>

@@ -1,13 +1,15 @@
+/*FONTE*/
 @font-face {
-    font-family: "Unica One";
-    src: url('./fonts/unicaone.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url('./fonts/unicaone.woff2') format('woff2'); /*Importa a fonte*/
+    font-family: "Unica One"; /*Define qual fonte é*/
+    font-weight: normal; /*Tamanho da fonte*/
+    font-style: normal; /*Se é italico, negrito etc*/
+    font-display: swap; /*Impede que o navegador abra sem renderizar nenhum texto, enquanto ta baixando a fonte oficial ele roda em uma generica*/
 }
 
+/*Corpo da página*/
 body{
-    background: linear-gradient(135deg, midnightblue, slateblue, darkblue);
+    background: linear-gradient(135deg, midnightblue, slateblue, darkblue); /*Gradiente do fundo da pagina*/
 
     margin: 0;
     overflow: hidden;
@@ -22,6 +24,8 @@ body{
     font-family: "Unica One", cursive;
     position: relative;
 }
+
+/*Organização da logo do coplandOS*/
 .copland {
     background-image: url("./images/copland.png");
     background-size: cover;
@@ -43,6 +47,8 @@ body{
     opacity: 0.4;
     filter: blur(8px);
 }
+
+
 .login{
     position: relative;
     z-index: 1;
