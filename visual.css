@@ -28,7 +28,8 @@ body{
 /*Organização da logo do coplandOS*/
 .copland {
     background-image: url("./images/copland.png");
-    background-size: cover;
+    background-size: contain; /*faz nao cortar*/
+    background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -41,6 +42,7 @@ body{
     left: 50%;
 
     transform: translateX(-50%);
+
 
     z-index: 0;
 
