@@ -1,24 +1,39 @@
 const botao = document.getElementById("botao");
 
-botao.addEventListener("click", function () {
+botao.addEventListener("click", async function () {
 
     const user = document.getElementById("user").value;
     const pass = document.getElementById("pass").value;
 
-    if (user === "ashen" && pass === "123") {
+    try {
+        const resposta = await fetch("https://validationloginpagetest.onrender.com/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                user,
+                pass
+            })
+        });
+        const dados = await resposta.json();
 
-        window.location.href = "./index2.html";
-
+        if (dados.success) {
+            window.location.href = "./index2.html";
+        }
+        else {
+            alert("Login ou senha incorreta");
+        }
     }
-    else {
-        alert("Login ou senha incorreta");
-        location.reload();
+    catch (erro) {
+        alert("Erro ao conectar com o servidor");
+        console.error(erro);
     }
 });
+
 document.addEventListener("keypress", function(event){
 
     if(event.key === "Enter"){
         botao.click();
     }
-
 });
